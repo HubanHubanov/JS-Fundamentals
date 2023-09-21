@@ -6,12 +6,12 @@ function employees(arr) {
       name: line,
       personalNumber: line.length,
     };
-
+console.log(obj);
     restArr.push(obj);
   }
-  restArr.forEach((x) =>
-    console.log(`Name: ${x.name} -- Personal Number: ${x.personalNumber}`)
-  );
+//   restArr.forEach((x) =>
+//     console.log(`Name: ${x.name} -- Personal Number: ${x.personalNumber}`)
+//   );
 }
 
 employees([
