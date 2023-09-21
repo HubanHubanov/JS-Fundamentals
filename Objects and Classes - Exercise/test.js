@@ -1,36 +1,66 @@
-function makeADictionary(dataAsJSON) {
+function solve(firstName, lastName, age) {
+let obj = {
+    firstName,
+    lastName,
+    age,
+};
 
-    let myCollection = {}
-
-    for (let line of dataAsJSON) {
-
-        let obj = JSON.parse(line)
-        
-        let keys = Object.keys(obj);
-
-        myCollection[keys] = obj[keys]
-
-      
-    }
-
-    let sortKey = Object.keys(myCollection).sort((keyA, keyB) => keyA.localeCompare(keyB));
-
-    for (let key of sortKey) {
-        console.log(`Term: ${key} => Definition: ${myCollection[key]}`)
-    }
-
-
-
-
-
-
-
-
+return obj;
 }
-makeADictionary([
-    '{"Coffee":"A hot drink made from the roasted and ground seeds (coffee beans) of a tropical shrub."}',
-    '{"Bus":"A large motor vehicle carrying passengers by road, typically one serving the public on a fixed route and for a fare."}',
-    '{"Boiler":"A fuel-burning apparatus or container for heating water."}',
-    '{"Tape":"A narrow strip of  material, typically used to hold or fasten something."}',
-    '{"Microphone":"An instrument for converting sound waves into  electrical energy variations which may then be amplified,  transmitted, or recorded."}',
-  ]);
+
+console.log(solve("Peter", "Pan", "20"));
+
+function solve(obj) {
+  for (let key in obj) {
+    console.log(`${key} -> ${obj[key]}`);
+  }
+}
+solve({
+  name: "Plovdiv",
+  area: 389,
+  population: 1162358,
+  country: "Bulgaria",
+  postCode: "4000",
+});
+
+function solve(JSONstring) {
+  let obj = JSON.parse(JSONstring);
+
+  for (let key in obj) {
+    console.log(`${key}: ${obj[key]}`);
+  }
+}
+solve('{"name": "George", "age": 40, "town": "Sofia"}');
+
+function solve(name, lastName, hairColor) {
+  let obj = {
+    name,
+    lastName,
+    hairColor,
+  };
+
+  let res = JSON.stringify(obj);
+
+  console.log(res);
+}
+solve("George", "Jones", "Brown");
+
+
+
+function cats(arr) {
+  class Cat {
+    constructor(name, age) {
+      (this.name = name), (this.age = age);
+    }
+    meow() {
+      console.log(`${this.name}, age ${this.age} says Meow`);
+    }
+  }
+
+  arr.forEach((el) => {
+    let [name, age] = el.split(" ");
+    let currCat = new Cat(name, age);
+    currCat.meow();
+  });
+}
+cats(["Mellow 2", "Tom 5"]);
