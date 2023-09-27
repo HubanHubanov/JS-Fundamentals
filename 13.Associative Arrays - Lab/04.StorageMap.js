@@ -10,7 +10,7 @@ function storage(data) {
     } else {
       result.set(name, result.get(name) + quantity);
     }
-  }
+  }   
 
   for (let [key, value] of result) {
     console.log(`${key} -> ${value}`);
