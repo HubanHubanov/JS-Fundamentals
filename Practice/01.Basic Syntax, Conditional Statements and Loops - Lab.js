@@ -1,16 +1,16 @@
-function solve(input) {
+function solve1(input) {
   console.log(input * 2);
 }
 
-solve(2);
+solve1(2);
 
-function solve(name, age, grade) {
+function solve2(name, age, grade) {
   console.log(`Name: ${name}, Age: ${age}, Grade: ${grade.toFixed(2)}`);
 }
 
-solve("John", 15, 5.54678);
+solve2("John", 15, 5.54678);
 
-function solve(grade) {
+function solve3(grade) {
   if (grade >= 5.5) {
     console.log("Excellent");
   } else {
@@ -18,9 +18,9 @@ function solve(grade) {
   }
 }
 
-solve(5.5);
+solve3(5.5);
 
-function solve(country) {
+function solve4(country) {
   if (country === "England" || country === "USA") {
     console.log("English");
   } else if (
@@ -34,9 +34,9 @@ function solve(country) {
   }
 }
 
-solve("USA");
+solve4("USA");
 
-function solve(input) {
+function solve5(input) {
 
     switch(input) {
         case 1 : console.log("January");; break;
@@ -55,9 +55,9 @@ function solve(input) {
     }
 }
 
-solve(13)
+solve5(13)
 
-function solve(dayType, age) {
+function solve6(dayType, age) {
   let price = 0;
 
   switch (dayType) {
@@ -99,43 +99,43 @@ function solve(dayType, age) {
   }
 }
 
-solve("Holiday", 110000);
+solve6("Holiday", 110000);
 
-function solve() {
+function solve7() {
   for (let i = 1; i <= 5; i++) {
     console.log(i);
   }
 }
 
-solve();
+solve7();
 
-function solve() {
+function solve8() {
   for (let i = 1; i <= 100; i++) {
     if (i % 3 == 0) {
       console.log(i);
     }
   }
 }
-solve();
+solve8();
 
-function solve(N) {
+function solve9(N) {
   while (N >= 1) {
     console.log(N);
     N--;
   }
 }
 
-solve(5);
+solve9(5);
 
-function solve(m, n) {
+function solve10(m, n) {
   for (let i = m; i >= n; i--) {
     console.log(i);
   }
 }
 
-solve(6, 2);
+solve10(6, 2);
 
-function solve(n) {
+function solve11(n) {
   let sum = 0;
 
   for (let i = 1; i < n * 2; i += 2) {
@@ -146,4 +146,4 @@ function solve(n) {
   console.log(`Sum: ${sum}`);
 }
 
-solve(10);
+solve11(10);
