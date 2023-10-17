@@ -20,7 +20,7 @@ function lastKnumberSequence(length, k) {
     res.push(sum);
   }
 
-  console.log(res);
+  console.log(res.join(" "));
 }
 
 lastKnumberSequence(6, 3);
