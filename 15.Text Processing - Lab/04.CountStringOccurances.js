@@ -12,7 +12,7 @@ function countStringOccurances(text, word) {
   console.log(counter);
 }
 
-// countStringOccurances("This is a word and it also is a sentence", "is");
+countStringOccurances("This is a word and it also is a sentence", "is");
 
 countStringOccurances(
   "softuni is great place for learning new programming languages",
