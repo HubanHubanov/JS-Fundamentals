@@ -2,8 +2,6 @@ function towns(arr) {
   for (let currInput of arr) {
     let [town, latitude, longitude] = currInput.split(" | ");
 
-    console.log("fafa");
-
     let obj = {
       town: town,
       latitude: Number(latitude).toFixed(2),
