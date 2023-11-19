@@ -1,26 +1,22 @@
 function makeADicktionary(data) {
-  let arr = [];
-
-  for (let el of data) {
-    let currObj = JSON.parse(el);
-
-    let key = Object.keys(currObj);
-
-    let obj = {
-      term: key[0],
-      definition: currObj[key],
-    };
-
-    arr.push(obj);
+    let obj = {};
+  
+    for (let el of data) {
+      let currObj = JSON.parse(el);
+  
+      let key = Object.keys(currObj);
+  
+      obj[key] = currObj[key];
+    }
+  
+    let entries = Object.entries(obj);
+    let sortedEntries = entries.sort((a, b) => a[0].localeCompare(b[0]));
+  
+    for (let [key, value] of entries) {
+      console.log(`Term: ${key} => Definition: ${value}`);
+    }
   }
-
-  let sorted = arr.sort((a, b) => a.term.localeCompare(b.term));
-
-  for (let el of sorted) {
-    console.log(`Term: ${el.term} => Definition: ${el.definition}`);
-  }
-}
-
+  
 makeADicktionary([
   '{"Coffee":"A hot drink made from the roasted and ground seeds (coffee beans) of a tropical shrub."}',
   '{"Bus":"A large motor vehicle carrying passengers by road, typically one serving the public on a fixed route and for a fare."}',
