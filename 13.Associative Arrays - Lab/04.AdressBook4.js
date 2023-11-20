@@ -1,21 +1,14 @@
 function adressBook(input) {
-    let obj = {};
+    let book = {};
   
     for (let el of input) {
-      let tokens = el.split(":");
-      let name = tokens[0];
-      let adress = tokens[1];
-  
-      obj[name] = adress;
+      let [name, address] = el.split(":");
+      book[name] = address;
     }
+    let sortedKeys = Object.keys(book).sort((a, b) => a.localeCompare(b));
   
-    let entries = Object.entries(obj);
-    let entriesSorted = entries.sort(([keyA, valueA], [keyB, valueB]) =>
-      keyA.localeCompare(keyB)
-    );
-  
-    for (let [key, value] of entries) {
-      console.log(`${key} -> ${value}`);
+    for (let key of sortedKeys) {
+      console.log(key, "->", book[key]);
     }
   }
 
