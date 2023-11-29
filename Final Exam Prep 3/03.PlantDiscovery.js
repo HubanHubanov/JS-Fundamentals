@@ -87,7 +87,7 @@ plantDiscovery([
   "Reset: Arnoldii",
   "Exhibition",
 ]);
-console.log("----------------");
+console.log("-----------------");
 plantDiscovery((["2",
 "Candelabra<->10",
 "Oahu<->10",

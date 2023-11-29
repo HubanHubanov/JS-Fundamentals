@@ -88,12 +88,12 @@ plantDiscovery([
   "Reset: Arnoldii",
   "Exhibition",
 ]);
-// console.log("----------------");
-// plantDiscovery([
-//   "2",
-//   "Candelabra<->10",
-//   "Oahu<->10",
-//   "Rate: Oahu - 7",
-//   "Rate: Candelabra - 6",
-//   "Exhibition",
-// ]);
+console.log("----------------");
+plantDiscovery([
+  "2",
+  "Candelabra<->10",
+  "Oahu<->10",
+  "Rate: Oahu - 7",
+  "Rate: Candelabra - 6",
+  "Exhibition",
+]);
