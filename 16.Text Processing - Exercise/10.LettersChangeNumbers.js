@@ -1,5 +1,7 @@
 function lettersChangeNumbers(input) {
-  let inputArr = input.split(" ");
+  let pattern = /\s+/g
+
+  let inputArr = input.split(pattern);
 
   let letters = {
     a: 1,
@@ -79,12 +81,8 @@ function lettersChangeNumbers(input) {
   console.log(sum.toFixed(2));
 }
 
-// lettersChangeNumbers("A12b s17G");
-
-// console.log("------------------");
+lettersChangeNumbers("A12b    s17G");
 
 lettersChangeNumbers("P34562Z q2576f H456z");
 
-// console.log("------------------");
-
-// lettersChangeNumbers("a1A");
+lettersChangeNumbers("a1A");
