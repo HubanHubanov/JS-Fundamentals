@@ -1,0 +1,25 @@
+h1{
+    color: red;
+}
+
+h2{
+    color:rgb(38, 255, 0);
+    font-size: 20px
+}
+
+ul{
+ list-style-type: disc;
+}
+
+ol{
+    list-style: lower-roman ;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+.content{
+    width: 900px;
+    margin: 100px;
+}
